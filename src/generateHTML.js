@@ -1,4 +1,3 @@
-
 const generateHTML = (answersArr) => {
   let newCard = '';
   let employeeCard =[];
@@ -41,10 +40,8 @@ const generateHTML = (answersArr) => {
   };
     
 return `
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,7 +52,6 @@ return `
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 <div class="jumbotron jumbotron-fluid">
 <div class="container">
@@ -63,7 +59,6 @@ return `
     <h1 class="text-center text-white">MY TEAM</h1>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="team-area col-12 d-flex justify-content-center mt-5">

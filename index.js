@@ -1,4 +1,4 @@
-//packages needed for this application
+//packages needed for app
 
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -39,7 +39,7 @@ const manager = [
   {
     type: 'input',
     message: "What is their office number?",
-    name: 'officeNum'
+    name: 'officeNum',
   }
 ];
   
@@ -62,7 +62,7 @@ const manager = [
   {
     type: 'input',
     message: "What is their Github username?",
-    name: 'github'
+    name: 'github',
   }
 ];
 
@@ -85,11 +85,11 @@ const intern = [
   {
     type: 'input',
     message: "What school did they attend?",
-    name: 'school'
-  }
+    name: 'school',
+  },
 ];
 
-//initializing app
+//init app
 function init () {
   inquirer.prompt(questions).then(answers => {
     if (answers.role === 'All done') {
@@ -99,9 +99,7 @@ function init () {
     }
     if (answers.role === 'Manager') {
       inquirer.prompt(manager).then(answers => {
-        console.log(answers)
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNum);
-        console.log(manager)
         answersArr.push(manager);
         init();
       })
